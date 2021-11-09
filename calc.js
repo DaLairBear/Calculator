@@ -30,6 +30,11 @@ reader.question("What would you like to calculate?", function(input){
 		console.log(num1 - num2);
 	}
 
+	//Mutiplication
+	//Added redundancy if "x" is used for multiplication instead of "*"
+	else if (mathSymbol === "*" || "x"){
+		console.log(num1 * num2);
+	}
 	// This line closes the connection to the command line interface.
 	reader.close()
 
