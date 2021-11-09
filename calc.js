@@ -8,7 +8,11 @@ const reader = readline.createInterface({
 });
 
 
-
+console.log("Addition use: + (i.e. \"+ 1 1\")")
+console.log("Subtraction use: - (i.e. \"- 2 1\")") 
+console.log("Multiplication use: * (i.e. \"* 2 2\")") 
+console.log("Division use / (i.e. \"/ 2 2\")")
+console.log("Square Root use: # (i.e. \"# 4\")")
 reader.question("What would you like to calculate?", function(input){
 	tokens = input.split(' ');
 	
@@ -31,17 +35,19 @@ reader.question("What would you like to calculate?", function(input){
 	}
 
 	//Mutiplication
-	//Added redundancy if "x" is used for multiplication instead of "*"
 	else if (mathSymbol === "*"){
 		console.log(num1 * num2);
 	}
-	else if (mathSymbol === "x"){
-		console.log(num1 * num2)
-	}
-	
+
 	//Division
 	else if(mathSymbol === "/"){
 		console.log(num1 / num2);
+	}
+
+	//Square Root
+	else if(mathSymbol === "#"){
+		let x = Math.sqrt(num1)
+		console.log(x)
 	}
 	// This line closes the connection to the command line interface.
 	reader.close()
