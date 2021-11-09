@@ -22,29 +22,31 @@ reader.question("What would you like to calculate?", function(input){
 	mathSymbol = tokens[0];
 	num1 = Number(tokens[1]);
 	num2 = Number(tokens[2]);
+	num3 = Number(tokens[3]);
 
 	console.log('mathSymbol', mathSymbol);
 	console.log("num1", num1)
 	console.log("num2", num2)
+	console.log("num3", num3)
 
 	//Addition
 	if (mathSymbol === "+"){
-		console.log(num1 + num2);
+		console.log(num1 + num2 + num3);
 	} 
 	
 	//Subtraction
 	else if (mathSymbol === "-"){
-		console.log(num1 - num2);
+		console.log(num1 - num2 - num3);
 	}
 
 	//Mutiplication
 	else if (mathSymbol === "*"){
-		console.log(num1 * num2);
+		console.log(num1 * num2 * num3);
 	}
 
 	//Division
 	else if(mathSymbol === "/"){
-		console.log(num1 / num2);
+		console.log(num1 / num2 / num3);
 	}
 
 	//Square Root
@@ -55,13 +57,13 @@ reader.question("What would you like to calculate?", function(input){
 
 	//Exponent
 	else if(mathSymbol === "^"){
-		let x = Math.pow(num1,num2);
+		let x = Math.pow(num1,num2,num3);
 		console.log(x)
 	}
 
 	//Remainder
 	else if (mathSymbol === "%"){
-		console.log(num1 % num2)
+		console.log(num1 % num2 % num3)
 	}
 	// This line closes the connection to the command line interface.
 	reader.close()
