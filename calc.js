@@ -14,6 +14,7 @@ console.log("Multiplication use: * (i.e. \"* 2 2\")")
 console.log("Division use / (i.e. \"/ 2 2\")")
 console.log("Square Root use: # (i.e. \"# 4\")")
 console.log("Eponents use: ^ (i.e. \"^ 2 3\")")
+console.log("To find the remainder of a division use: % (i.e. \"% 3 2\")")
 
 reader.question("What would you like to calculate?", function(input){
 	tokens = input.split(' ');
@@ -56,6 +57,11 @@ reader.question("What would you like to calculate?", function(input){
 	else if(mathSymbol === "^"){
 		let x = Math.pow(num1,num2);
 		console.log(x)
+	}
+
+	//Remainder
+	else if (mathSymbol === "%"){
+		console.log(num1 % num2)
 	}
 	// This line closes the connection to the command line interface.
 	reader.close()
